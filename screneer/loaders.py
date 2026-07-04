@@ -14,7 +14,7 @@ def read_parquet_tail(
     Returns:
         A pandas DataFrame containing the requested trailing rows.
     """
-    # Note: This assumes parquet file has excess rows.
+    #  Read metada without reading files and get number of rows
     parquet_file = pq.ParquetFile(file_path)
     total_rows = parquet_file.metadata.num_rows
     skip_rows = max(0, total_rows - required_rows)
