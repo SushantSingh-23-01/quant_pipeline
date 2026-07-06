@@ -9,6 +9,17 @@ def get_donchian_channels(
         lower_length: int, 
         upper_length: int,
     ) -> Tuple[pd.Series, pd.Series, pd.Series]:
+    """    
+    Args:
+        high: Series of historical high prices.
+        low: Series of historical low prices.
+        lower_length: Lookback period for calculating the lower channel band.
+        upper_length: Lookback period for calculating the upper channel band.
+    
+    Returns:
+        A tuple containing (lower_band, middle_band, upper_band) as Pandas
+        Series.
+    """
       
     dct = ta.donchian(high=high, low=low, lower_length=lower_length, upper_length=upper_length)
       
