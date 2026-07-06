@@ -1,6 +1,6 @@
 import pandas as pd
 import pandas_ta as ta
-from backtesting import Strategy, Backtest
+from backtesting import Strategy
 from typing import Tuple
 
 def get_donchian_channels(
