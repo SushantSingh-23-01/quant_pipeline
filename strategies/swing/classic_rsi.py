@@ -1,6 +1,6 @@
 import pandas as pd
 import pandas_ta as ta
-from backtesting import Backtest
+from backtesting import Strategy
 
 class ClassicRSI(Strategy):
     """
