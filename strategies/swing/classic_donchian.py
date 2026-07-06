@@ -1,14 +1,13 @@
 import pandas as pd
 import pandas_ta as ta
 from backtesting import Strategy
-from typing import Tuple
 
 def get_donchian_channels(
     high: pd.Series, 
     low: pd.Series, 
     lower_length: int, 
     upper_length: int,
-    ) -> Tuple[pd.Series, pd.Series, pd.Series]:
+    ) -> tuple[pd.Series, pd.Series, pd.Series]:
     """    
     Args:
         high: Series of historical high prices.
