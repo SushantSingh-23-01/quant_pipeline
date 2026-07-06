@@ -2,13 +2,12 @@ import pandas as pd
 import pandas_ta as ta
 from backtesting import Strategy
 from backtesting.lib import crossover
-from typing import Tuple
 
 def get_bollinger_bands(
     close: pd.Series,
     length: int,
     std: float
-    ) -> Tuple[pd.Series, pd.Series, pd.Series]:
+    ) -> tuple[pd.Series, pd.Series, pd.Series]:
     bbands = ta.bbands(close, length=length, std=std)
     # Safely select columns based on their string names to avoid indexing mix-ups
     bbl = [col for col in bbands.columns if col.startswith('BBL')][0]
