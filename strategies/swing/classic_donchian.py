@@ -4,10 +4,10 @@ from backtesting import Strategy, Backtest
 from typing import Tuple
 
 def get_donchian_channels(
-        high: pd.Series, 
-        low: pd.Series, 
-        lower_length: int, 
-        upper_length: int,
+    high: pd.Series, 
+    low: pd.Series, 
+    lower_length: int, 
+    upper_length: int,
     ) -> Tuple[pd.Series, pd.Series, pd.Series]:
     """    
     Args:
